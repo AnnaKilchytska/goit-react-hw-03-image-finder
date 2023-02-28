@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 
 import React, { Component } from 'react';
+
 class Searchform extends Component {
   state = {
     value: '',
   };
 
-  static propTypes = {};
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
 
   handleInput = e => {
     this.setState({ value: e.target.value.toLowerCase() });

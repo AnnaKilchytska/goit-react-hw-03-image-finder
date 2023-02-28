@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import ImageGallery from './ImageGallery';
-import Loader from './Loader';
-import Button from './Button';
 import Searchform from './Searchbar';
 
 class App extends Component {
