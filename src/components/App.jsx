@@ -35,7 +35,8 @@ class App extends Component {
 
         // console.log('images after first request', images);
         this.setState({
-          images: [...prevState.images, ...images],
+          images:
+            this.state.page === 1 ? images : [...prevState.images, ...images],
           status: 'success',
           showBtn: this.state.page < Math.ceil(allData.totalHits / 12),
         });
