@@ -18,8 +18,7 @@ class App extends Component {
     try {
       if (
         prevState.request !== this.state.request ||
-        (prevState.page !== this.state.page &&
-          prevState.request === this.state.request)
+        prevState.page !== this.state.page
       ) {
         // console.log('new request', this.state.request);
         // console.log('previous image', prevState.request);
@@ -36,7 +35,7 @@ class App extends Component {
 
         // console.log('images after first request', images);
         this.setState({
-          images: [prevState.images, ...images],
+          images: [...prevState.images, ...images],
           status: 'success',
           showBtn: this.state.page < Math.ceil(allData.totalHits / 12),
         });
@@ -74,7 +73,6 @@ class App extends Component {
   }
 
   handleFormSubmit = image => {
-    console.log(image);
     this.setState({
       request: image,
       images: [],
