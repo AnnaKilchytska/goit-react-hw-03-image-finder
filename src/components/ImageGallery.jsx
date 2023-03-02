@@ -11,7 +11,6 @@ class ImageGallery extends Component {
 
   static propTypes = {
     images: PropTypes.arrayOf(PropTypes.object).isRequired,
-    status: PropTypes.string.isRequired,
   };
 
   handleModalClick = url => {
